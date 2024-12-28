@@ -15,11 +15,13 @@ function whenClicked(){
    
     var button_name = this.innerHTML;
     mapTheDrums(button_name)
+    buttonAnimation(button_name)
 }
 
 
 document.addEventListener("keydown", function (event) {
     mapTheDrums(event.key)
+    buttonAnimation(event.key)
 
 })
 
@@ -57,4 +59,13 @@ function mapTheDrums(input){
             break;
         default: console.log(button_name);
     }
+}
+
+
+function buttonAnimation(currentKey){
+    var activeButton = document.querySelector("."+currentKey);
+    activeButton.classList.add("pressed")
+    setTimeout(() => {
+        activeButton.classList.remove("pressed")
+    }, 100);
 }

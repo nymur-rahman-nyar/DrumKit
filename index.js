@@ -46,3 +46,40 @@ function whenClicked(){
         default: console.log(button_name);
     }
 }
+
+
+document.addEventListener("keydown", function (event) {
+    var button_name = this.innerHTML;
+    switch (event.key) {
+        case button_name = 'w':
+            var audio = new Audio('sounds/tom-1.mp3');
+            audio.play();
+            break;
+        case button_name = 'a':
+            var audio = new Audio('sounds/tom-2.mp3');
+            audio.play();
+            break;
+        case button_name = 's':
+            var audio = new Audio('sounds/tom-3.mp3');
+            audio.play();
+            break;
+        case button_name = 'd':
+            var audio = new Audio('sounds/tom-4.mp3');
+            audio.play();
+            break;
+        case button_name = 'j':
+            var audio = new Audio('sounds/crash.mp3');
+            audio.play();
+            break;
+        case button_name = 'k':
+            var audio = new Audio('sounds/kick-bass.mp3');
+            audio.play();
+            break;
+        case button_name = 'l':
+            var audio = new Audio('sounds/snare.mp3');
+            audio.play();
+            break;
+        default: console.log(button_name);
+    }
+
+})
